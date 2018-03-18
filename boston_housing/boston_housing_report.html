@@ -11778,11 +11778,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Machine-Learning-Engineer-Nanodegree">Machine Learning Engineer Nanodegree<a class="anchor-link" href="#Machine-Learning-Engineer-Nanodegree">&#182;</a></h1><h2 id="Model-Evaluation-&amp;-Validation">Model Evaluation &amp; Validation<a class="anchor-link" href="#Model-Evaluation-&amp;-Validation">&#182;</a></h2><h2 id="Project:-Predicting-Boston-Housing-Prices">Project: Predicting Boston Housing Prices<a class="anchor-link" href="#Project:-Predicting-Boston-Housing-Prices">&#182;</a></h2><p>Welcome to the first project of the Machine Learning Engineer Nanodegree! In this notebook, some template code has already been provided for you, and you will need to implement additional functionality to successfully complete this project. You will not need to modify the included code beyond what is requested. Sections that begin with <strong>'Implementation'</strong> in the header indicate that the following block of code will require additional functionality which you must provide. Instructions will be provided for each section and the specifics of the implementation are marked in the code block with a 'TODO' statement. Please be sure to read the instructions carefully!</p>
-<p>In addition to implementing code, there will be questions that you must answer which relate to the project and your implementation. Each section where you will answer a question is preceded by a <strong>'Question X'</strong> header. Carefully read each question and provide thorough answers in the following text boxes that begin with <strong>'Answer:'</strong>. Your project submission will be evaluated based on your answers to each of the questions and the implementation you provide.</p>
-<blockquote><p><strong>Note:</strong> Code and Markdown cells can be executed using the <strong>Shift + Enter</strong> keyboard shortcut. In addition, Markdown cells can be edited by typically double-clicking the cell to enter edit mode.</p>
-</blockquote>
-
+<h1 id="Machine-Learning-Engineer-Nanodegree">Machine Learning Engineer Nanodegree<a class="anchor-link" href="#Machine-Learning-Engineer-Nanodegree">&#182;</a></h1><h2 id="Model-Evaluation-&amp;-Validation-Project:-Predicting-Boston-Housing-Prices">Model Evaluation &amp; Validation Project: Predicting Boston Housing Prices<a class="anchor-link" href="#Model-Evaluation-&amp;-Validation-Project:-Predicting-Boston-Housing-Prices">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11791,7 +11787,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Getting-Started">Getting Started<a class="anchor-link" href="#Getting-Started">&#182;</a></h2><p>In this project, you will evaluate the performance and predictive power of a model that has been trained and tested on data collected from homes in suburbs of Boston, Massachusetts. A model trained on this data that is seen as a <em>good fit</em> could then be used to make certain predictions about a home — in particular, its monetary value. This model would prove to be invaluable for someone like a real estate agent who could make use of such information on a daily basis.</p>
+<h2 id="Getting-Started">Getting Started<a class="anchor-link" href="#Getting-Started">&#182;</a></h2><p>In this project, the performance and predictive power of a model that has been trained and tested on data collected from homes in suburbs of Boston, Massachusetts, will be evaluated. A model trained on this data that is seen as a <em>good fit</em> could then be used to make certain predictions about a home — in particular, its monetary value. This model would prove to be invaluable for someone like a real estate agent who could make use of such information on a daily basis.</p>
 <p>The dataset for this project originates from the <a href="https://archive.ics.uci.edu/ml/datasets/Housing">UCI Machine Learning Repository</a>. The Boston housing data was collected in 1978 and each of the 506 entries represent aggregated data about 14 features for homes from various suburbs in Boston, Massachusetts. For the purposes of this project, the following preprocessing steps have been made to the dataset:</p>
 <ul>
 <li>16 data points have an <code>'MEDV'</code> value of 50.0. These data points likely contain <strong>missing or censored values</strong> and have been removed.</li>
@@ -11799,7 +11795,6 @@ div#notebook {
 <li>The features <code>'RM'</code>, <code>'LSTAT'</code>, <code>'PTRATIO'</code>, and <code>'MEDV'</code> are essential. The remaining <strong>non-relevant features</strong> have been excluded.</li>
 <li>The feature <code>'MEDV'</code> has been <strong>multiplicatively scaled</strong> to account for 35 years of market inflation.</li>
 </ul>
-<p>Run the code cell below to load the Boston housing dataset, along with a few of the necessary Python libraries required for this project. You will know the dataset loaded successfully if the size of the dataset is reported.</p>
 
 </div>
 </div>
@@ -11855,25 +11850,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="#Data-Exploration">&#182;</a></h2><p>In this first section of this project, you will make a cursory investigation about the Boston housing data and provide your observations. Familiarizing yourself with the data through an explorative process is a fundamental practice to help you better understand and justify your results.</p>
-<p>Since the main goal of this project is to construct a working model which has the capability of predicting the value of houses, we will need to separate the dataset into <strong>features</strong> and the <strong>target variable</strong>. The <strong>features</strong>, <code>'RM'</code>, <code>'LSTAT'</code>, and <code>'PTRATIO'</code>, give us quantitative information about each data point. The <strong>target variable</strong>, <code>'MEDV'</code>, will be the variable we seek to predict. These are stored in <code>features</code> and <code>prices</code>, respectively.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Implementation:-Calculate-Statistics">Implementation: Calculate Statistics<a class="anchor-link" href="#Implementation:-Calculate-Statistics">&#182;</a></h3><p>For your very first coding implementation, you will calculate descriptive statistics about the Boston housing prices. Since <code>numpy</code> has already been imported for you, use this library to perform the necessary calculations. These statistics will be extremely important later on to analyze various prediction results from the constructed model.</p>
-<p>In the code cell below, you will need to implement the following:</p>
-<ul>
-<li>Calculate the minimum, maximum, mean, median, and standard deviation of <code>'MEDV'</code>, which is stored in <code>prices</code>.<ul>
-<li>Store each calculation in their respective variable.</li>
-</ul>
-</li>
-</ul>
+<h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="#Data-Exploration">&#182;</a></h2><p>Since the main goal of this project is to construct a working model which has the capability of predicting the value of houses, the dataset needs to be separated into <strong>features</strong> and the <strong>target variable</strong>. The <strong>features</strong>, <code>'RM'</code>, <code>'LSTAT'</code>, and <code>'PTRATIO'</code>, give the quantitative information about each data point. The <strong>target variable</strong>, <code>'MEDV'</code>, will be the variable to predict. These are stored in <code>features</code> and <code>prices</code>, respectively.</p>
 
 </div>
 </div>
@@ -11883,19 +11860,19 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Minimum price of the data</span>
 <span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
-<span class="c1"># TODO: Maximum price of the data</span>
+<span class="c1"># Maximum price of the data</span>
 <span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
-<span class="c1"># TODO: Mean price of the data</span>
+<span class="c1"># Mean price of the data</span>
 <span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
-<span class="c1"># TODO: Median price of the data</span>
+<span class="c1"># Median price of the data</span>
 <span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
-<span class="c1"># TODO: Standard deviation of prices of the data</span>
+<span class="c1"># Standard deviation of prices of the data</span>
 <span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># Show the calculated statistics</span>
@@ -11939,30 +11916,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-1---Feature-Observation">Question 1 - Feature Observation<a class="anchor-link" href="#Question-1---Feature-Observation">&#182;</a></h3><p>As a reminder, we are using three features from the Boston housing dataset: <code>'RM'</code>, <code>'LSTAT'</code>, and <code>'PTRATIO'</code>. For each data point (neighborhood):</p>
-<ul>
-<li><code>'RM'</code> is the average number of rooms among homes in the neighborhood.</li>
-<li><code>'LSTAT'</code> is the percentage of homeowners in the neighborhood considered "lower class" (working poor).</li>
-<li><code>'PTRATIO'</code> is the ratio of students to teachers in primary and secondary schools in the neighborhood.</li>
-</ul>
-<p><strong> Using your intuition, for each of the three features above, do you think that an increase in the value of that feature would lead to an </strong>increase<strong> in the value of <code>'MEDV'</code> or a </strong>decrease<strong> in the value of <code>'MEDV'</code>? Justify your answer for each.</strong></p>
-<p><strong>Hint:</strong> This problem can phrased using examples like below.</p>
-<ul>
-<li>Would you expect a home that has an <code>'RM'</code> value(number of rooms) of 6 be worth more or less than a home that has an <code>'RM'</code> value of 7?</li>
-<li>Would you expect a neighborhood that has an <code>'LSTAT'</code> value(percent of lower class workers) of 15 have home prices be worth more or less than a neighborhood that has an <code>'LSTAT'</code> value of 20?</li>
-<li>Would you expect a neighborhood that has an <code>'PTRATIO'</code> value(ratio of students to teachers) of 10 have home prices be worth more or less than a neighborhood that has an <code>'PTRATIO'</code> value of 15?</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
-<ul>
+<h3 id="Feature-Observation">Feature Observation<a class="anchor-link" href="#Feature-Observation">&#182;</a></h3><ul>
 <li><code>'RM'</code>: An increase in the number of rooms would lead to an increase in the value of <code>'MEDV'</code>, for more rooms usually means larger size. Larger houses usually take up more land, require more raw materials to build and maintain, thus should have higher total value. </li>
 <li><code>'LSTAT'</code>: A higher value in the percent of lower class workers would lead to a lower value in the value of <code>'MEDV'</code>. This is because people of "lower class" are ususally poor, and would not spend a lot of money on expensive stuff that improves their living conditions. Therefore, the "living quality" in the surrounding environment may not be very attractive to "upper class" people who are more likely to accept higher price when purchasing a house. Another reason is that due to some stereotype, people tend to relate "lower class" societies to higher crime rates, so they would probably not consider a neighborhood with more lower class workers as a good choice.</li>
 <li><code>'PTRATIO'</code>: A higher value in ratio of students to teachers would lead to a lower value in the value of <code>'MEDV'</code>. This is similar to the situation for the lower clcass workers: students usually have lower income (or have no income) so they cannot afford luxurious living conditions. Therefore the surrounding neighbourbood may not be attractive to people who want to pay a high price for housing.</li>
@@ -11977,8 +11931,7 @@ Standard deviation of prices: $165,171.13
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Developing-a-Model">Developing a Model<a class="anchor-link" href="#Developing-a-Model">&#182;</a></h2><p>In this second section of the project, you will develop the tools and techniques necessary for a model to make a prediction. Being able to make accurate evaluations of each model's performance through the use of these tools and techniques helps to greatly reinforce the confidence in your predictions.</p>
-
+<h2 id="Developing-a-Model">Developing a Model<a class="anchor-link" href="#Developing-a-Model">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11987,13 +11940,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Implementation:-Define-a-Performance-Metric">Implementation: Define a Performance Metric<a class="anchor-link" href="#Implementation:-Define-a-Performance-Metric">&#182;</a></h3><p>It is difficult to measure the quality of a given model without quantifying its performance over training and testing. This is typically done using some type of performance metric, whether it is through calculating some type of error, the goodness of fit, or some other useful measurement. For this project, you will be calculating the <a href="http://stattrek.com/statistics/dictionary.aspx?definition=coefficient_of_determination"><em>coefficient of determination</em></a>, R<sup>2</sup>, to quantify your model's performance. The coefficient of determination for a model is a useful statistic in regression analysis, as it often describes how "good" that model is at making predictions.</p>
-<p>The values for R<sup>2</sup> range from 0 to 1, which captures the percentage of squared correlation between the predicted and actual values of the <strong>target variable</strong>. A model with an R<sup>2</sup> of 0 is no better than a model that always predicts the <em>mean</em> of the target variable, whereas a model with an R<sup>2</sup> of 1 perfectly predicts the target variable. Any value between 0 and 1 indicates what percentage of the target variable, using this model, can be explained by the <strong>features</strong>. <em>A model can be given a negative R<sup>2</sup> as well, which indicates that the model is <strong>arbitrarily worse</strong> than one that always predicts the mean of the target variable.</em></p>
-<p>For the <code>performance_metric</code> function in the code cell below, you will need to implement the following:</p>
-<ul>
-<li>Use <code>r2_score</code> from <code>sklearn.metrics</code> to perform a performance calculation between <code>y_true</code> and <code>y_predict</code>.</li>
-<li>Assign the performance score to the <code>score</code> variable.</li>
-</ul>
+<h3 id="Define-a-Performance-Metric">Define a Performance Metric<a class="anchor-link" href="#Define-a-Performance-Metric">&#182;</a></h3><p>Use <code>r2_score</code> from <code>sklearn.metrics</code> to perform a performance calculation between <code>y_true</code> and <code>y_predict</code>.</p>
 
 </div>
 </div>
@@ -12003,14 +11950,14 @@ Standard deviation of prices: $165,171.13
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;r2_score&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import &#39;r2_score&#39;</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
 
 <span class="k">def</span> <span class="nf">performance_metric</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Calculates and returns the performance score between </span>
 <span class="sd">        true and predicted values based on the metric chosen. &quot;&quot;&quot;</span>
     
-    <span class="c1"># TODO: Calculate the performance score between &#39;y_true&#39; and &#39;y_predict&#39;    </span>
+    <span class="c1"># Calculate the performance score between &#39;y_true&#39; and &#39;y_predict&#39;    </span>
     <span class="n">score</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)</span> 
     
     <span class="c1"># Return the score</span>
@@ -12027,117 +11974,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-2---Goodness-of-Fit">Question 2 - Goodness of Fit<a class="anchor-link" href="#Question-2---Goodness-of-Fit">&#182;</a></h3><p>Assume that a dataset contains five data points and a model made the following predictions for the target variable:</p>
-<table>
-<thead><tr>
-<th style="text-align:center">True Value</th>
-<th style="text-align:center">Prediction</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">3.0</td>
-<td style="text-align:center">2.5</td>
-</tr>
-<tr>
-<td style="text-align:center">-0.5</td>
-<td style="text-align:center">0.0</td>
-</tr>
-<tr>
-<td style="text-align:center">2.0</td>
-<td style="text-align:center">2.1</td>
-</tr>
-<tr>
-<td style="text-align:center">7.0</td>
-<td style="text-align:center">7.8</td>
-</tr>
-<tr>
-<td style="text-align:center">4.2</td>
-<td style="text-align:center">5.3</td>
-</tr>
-</tbody>
-</table>
-<p>Run the code cell below to use the <code>performance_metric</code> function and calculate this model's coefficient of determination.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Calculate the performance of this model</span>
-<span class="n">score</span> <span class="o">=</span> <span class="n">performance_metric</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">7.8</span><span class="p">,</span> <span class="mf">5.3</span><span class="p">])</span>
-<span class="k">print</span> <span class="s2">&quot;Model has a coefficient of determination, R^2, of {:.3f}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Model has a coefficient of determination, R^2, of 0.923.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Would you consider this model to have successfully captured the variation of the target variable? </li>
-<li>Why or why not?</li>
-</ul>
-<p><strong> Hint: </strong>  The R2 score is the proportion of the variance in the dependent variable that is predictable from the independent variable. In other words:</p>
-<ul>
-<li>R2 score of 0 means that the dependent variable cannot be predicted from the independent variable.</li>
-<li>R2 score of 1 means the dependent variable can be predicted from the independent variable.</li>
-<li>R2 score between 0 and 1 indicates the extent to which the dependent variable is predictable. An </li>
-<li>R2 score of 0.40 means that 40 percent of the variance in Y is predictable from X.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> I would say that this model successfully captured the variation of the target variable. The R2 score is 0.923, which means that 92.3% percent of the variance in price is predictable from features. Because R2 score of 1 means the dependent variable can be completely predicted from the independent variables, and as 92.3% is very close to 1, this model captured almost all the variation of the traget variable. Therefore it is very successful.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Implementation:-Shuffle-and-Split-Data">Implementation: Shuffle and Split Data<a class="anchor-link" href="#Implementation:-Shuffle-and-Split-Data">&#182;</a></h3><p>Your next implementation requires that you take the Boston housing dataset and split the data into training and testing subsets. Typically, the data is also shuffled into a random order when creating the training and testing subsets to remove any bias in the ordering of the dataset.</p>
-<p>For the code cell below, you will need to implement the following:</p>
-<ul>
-<li>Use <code>train_test_split</code> from <code>sklearn.cross_validation</code> to shuffle and split the <code>features</code> and <code>prices</code> data into training and testing sets.<ul>
-<li>Split the data into 80% training and 20% testing.</li>
-<li>Set the <code>random_state</code> for <code>train_test_split</code> to a value of your choice. This ensures results are consistent.</li>
-</ul>
-</li>
-<li>Assign the train and testing splits to <code>X_train</code>, <code>X_test</code>, <code>y_train</code>, and <code>y_test</code>.</li>
-</ul>
+<h3 id="Shuffle-and-Split-Data">Shuffle and Split Data<a class="anchor-link" href="#Shuffle-and-Split-Data">&#182;</a></h3><p>Split the data into training and testing subsets.</p>
 
 </div>
 </div>
@@ -12147,9 +11984,10 @@ Standard deviation of prices: $165,171.13
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;train_test_split&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import &#39;train_test_split&#39;</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="c1"># TODO: Shuffle and split the data into training and testing subsets</span>
+
+<span class="c1"># Shuffle and split the data into training and testing subsets</span>
 <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">features</span><span class="p">,</span> <span class="n">prices</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
@@ -12183,31 +12021,8 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-3---Training-and-Testing">Question 3 - Training and Testing<a class="anchor-link" href="#Question-3---Training-and-Testing">&#182;</a></h3><ul>
-<li>What is the benefit to splitting a dataset into some ratio of training and testing subsets for a learning algorithm?</li>
-</ul>
-<p><strong>Hint:</strong> Think about how overfitting or underfitting is contingent upon how splits on data is done.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> When training a model, we not only want to see whether the model works well on the data that we already have, but more importantly, we want the model to work well on making new predictions for data it has not already seen. If we use all our data for training, we may get a good model for the training data, but in this situation we can hardly control overfitting, which means that the model can perform very well for our training data, but it may be too good for this specific dataset and cannot be well generalized to some new data which is not entirely the same. Therefore, by splitting a dataset into some ratio of training and testing subsets, we can reduce the possibility of overfitting, for the model is already tested and evaluate with the validation data subset. Usually a larger part of the data is used in training subset to ensure the model won't be underfitting.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Analyzing-Model-Performance">Analyzing Model Performance<a class="anchor-link" href="#Analyzing-Model-Performance">&#182;</a></h2><p>In this third section of the project, you'll take a look at several models' learning and testing performances on various subsets of training data. Additionally, you'll investigate one particular algorithm with an increasing <code>'max_depth'</code> parameter on the full training set to observe how model complexity affects performance. Graphing your model's performance based on varying criteria can be beneficial in the analysis process, such as visualizing behavior that may not have been apparent from the results alone.</p>
+<h2 id="Analyzing-Model-Performance">Analyzing Model Performance<a class="anchor-link" href="#Analyzing-Model-Performance">&#182;</a></h2><p>Take a look at several models' learning and testing performances on various subsets of training data. Investigate one particular algorithm with an increasing <code>'max_depth'</code> parameter on the full training set to observe how model complexity affects performance. Graphing the model's performance based on varying criteria can be beneficial in the analysis process, such as visualizing behavior that may not have been apparent from the results alone.</p>
 
 </div>
 </div>
@@ -12217,8 +12032,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Learning-Curves">Learning Curves<a class="anchor-link" href="#Learning-Curves">&#182;</a></h3><p>The following code cell produces four graphs for a decision tree model with different maximum depths. Each graph visualizes the learning curves of the model for both training and testing as the size of the training set is increased. Note that the shaded region of a learning curve denotes the uncertainty of that curve (measured as the standard deviation). The model is scored on both the training and testing sets using R<sup>2</sup>, the coefficient of determination.</p>
-<p>Run the code cell below and use these graphs to answer the following question.</p>
+<h3 id="Learning-Curves">Learning Curves<a class="anchor-link" href="#Learning-Curves">&#182;</a></h3><p>Each graph below visualizes the learning curves of the model for both training and testing as the size of the training set is increased. The model is scored on both the training and testing sets using R<sup>2</sup>, the coefficient of determination.</p>
 
 </div>
 </div>
@@ -13263,24 +13077,7 @@ RERExMBIBygiIiIiIgZGOkARERERETEw0gGKiIiIiIiB8T+ftNLXC6QGbwAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-4---Learning-the-Data">Question 4 - Learning the Data<a class="anchor-link" href="#Question-4---Learning-the-Data">&#182;</a></h3><ul>
-<li>Choose one of the graphs above and state the maximum depth for the model. </li>
-<li>What happens to the score of the training curve as more training points are added? What about the testing curve? </li>
-<li>Would having more training points benefit the model? </li>
-</ul>
-<p><strong>Hint:</strong> Are the learning curves converging to particular scores? Generally speaking, the more data you have, the better. But if your training and testing curves are converging with a score above your benchmark threshold, would this be necessary?
-Think about the pros and cons of adding more training points based on if the training and testing curves are converging.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong><br>
-I select the graph with the maximum_depth = 3. As more training points are added, the score of the training curve went down a little bit from 1.0 and then reached about 0.8 and became stable there. On the other hand, as more training points are added, the testing curve went up from 0 and then stablized around 0.8.</p>
+<p>Based on the graphs, I select the graph with the maximum_depth = 3. As more training points are added, the score of the training curve went down a little bit from 1.0 and then reached about 0.8 and became stable there. On the other hand, as more training points are added, the testing curve went up from 0 and then stablized around 0.8.</p>
 <p>At the beginning, the first 50 data points largely changed both the training and testing curve. Then from 50 to 300 training points, both curves are still converging, but the rate is smaller compared to the first 50 data points. When the amount of data points reached 300, the training and testing curves already converged together, so adding more data would not change much on the curves. So I think when we have fewer data (i.e., &lt; 300), the more data we have the better for the model. But once the amount of data reaches 300, it is not necessary to add more data. In fact, if collecting data is expensive in this case, more than 300 data points will be even more unnecessary.</p>
 
 </div>
@@ -13291,8 +13088,7 @@ I select the graph with the maximum_depth = 3. As more training points are added
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Complexity-Curves">Complexity Curves<a class="anchor-link" href="#Complexity-Curves">&#182;</a></h3><p>The following code cell produces a graph for a decision tree model that has been trained and validated on the training data using different maximum depths. The graph produces two complexity curves — one for training and one for validation. Similar to the <strong>learning curves</strong>, the shaded regions of both the complexity curves denote the uncertainty in those curves, and the model is scored on both the training and validation sets using the <code>performance_metric</code> function.</p>
-<p><strong> Run the code cell below and use this graph to answer the following two questions Q5 and Q6. </strong></p>
+<h3 id="Complexity-Curves">Complexity Curves<a class="anchor-link" href="#Complexity-Curves">&#182;</a></h3><p>The following graph is for a decision tree model that has been trained and validated on the training data using different maximum depths. The graph produces two complexity curves — one for training and one for validation. Similar to the <strong>learning curves</strong>, the shaded regions of both the complexity curves denote the uncertainty in those curves, and the model is scored on both the training and validation sets using the <code>performance_metric</code> function.</p>
 
 </div>
 </div>
@@ -13759,22 +13555,7 @@ JT0REYkaSnoiIhI1lPRERCRqKOmJiEjU+F8hvc3PZ0t6oAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-5---Bias-Variance-Tradeoff">Question 5 - Bias-Variance Tradeoff<a class="anchor-link" href="#Question-5---Bias-Variance-Tradeoff">&#182;</a></h3><ul>
-<li>When the model is trained with a maximum depth of 1, does the model suffer from high bias or from high variance? </li>
-<li>How about when the model is trained with a maximum depth of 10? What visual cues in the graph justify your conclusions?</li>
-</ul>
-<p><strong>Hint:</strong> High bias is a sign of underfitting(model is not complex enough to pick up the nuances in the data) and high variance is a sign of overfitting(model is by-hearting the data and cannot generalize well). Think about which model(depth 1 or 10) aligns with which part of the tradeoff.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
-<p>When the model is trained with a maximum depth of 1, the model suffers from high bias, for both the training score and the validation score are low (training score: about 0.45; validation score: about 0.3). Here the scores are R^2 scores, which means that with a maximum depth of 1, the model can only predict 45% of the variation of the price for training data, and can only predict 30% of the variation of the price for validation data.<br>
+<h3 id="Bias-Variance-Tradeoff">Bias-Variance Tradeoff<a class="anchor-link" href="#Bias-Variance-Tradeoff">&#182;</a></h3><p>When the model is trained with a maximum depth of 1, the model suffers from high bias, for both the training score and the validation score are low (training score: about 0.45; validation score: about 0.3). Here the scores are R^2 scores, which means that with a maximum depth of 1, the model can only predict 45% of the variation of the price for training data, and can only predict 30% of the variation of the price for validation data.
 However, when the model is trained with a maximum depth of 10, we can see that the training and testing curves don't converge. To be specific, the training score was always as high as 1.0, whereas the testing score reached 0.7 and then stayed there. This pattern shows that the model suffers from high variance, for some changes in the data (from training data to testing data) lead to significant change in the model's score (drops from 1.0 to 0.7) and adding more training data cannot improve the model. This means that the model is overfitting, and cannot generalize well on testing data.</p>
 
 </div>
@@ -13785,21 +13566,7 @@ However, when the model is trained with a maximum depth of 10, we can see that t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-6---Best-Guess-Optimal-Model">Question 6 - Best-Guess Optimal Model<a class="anchor-link" href="#Question-6---Best-Guess-Optimal-Model">&#182;</a></h3><ul>
-<li>Which maximum depth do you think results in a model that best generalizes to unseen data? </li>
-<li>What intuition lead you to this answer?</li>
-</ul>
-<p><strong> Hint: </strong> Look at the graph above Question 5 and see where the validation scores lie for the various depths that have been assigned to the model. Does it get better with increased depth? At what point do we get our best validation score without overcomplicating our model? And remember, Occams Razor states "Among competing hypotheses, the one with the fewest assumptions should be selected."</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>   I think a maximum depth of 3 or 4 would result in a model that best generalizes to unseen data. Among the four graphs, maximum depth of 3 is the best, for it gives a relatively high score for both training and testing data (the two curves converge at about 0.8). When maximum depth was 1, the two curves converged but the score was low (at about 0.5), which means the model had high bias. When the maximum depth was 6 or 10, the two curves didn't converge and the training curve was always higher than the testing score, which means the model suffers from overfitting. Therefore among the four maximum depth, 3 is the best. I would say a maximum depth of 3 or 4 because I think model with maximum of 4 might have a higher score at which the two curves converge.</p>
+<h3 id="Best-Guess-Optimal-Model">Best-Guess Optimal Model<a class="anchor-link" href="#Best-Guess-Optimal-Model">&#182;</a></h3><p>I think a maximum depth of 3 or 4 would result in a model that best generalizes to unseen data. Among the four graphs, maximum depth of 3 is the best, for it gives a relatively high score for both training and testing data (the two curves converge at about 0.8). When maximum depth was 1, the two curves converged but the score was low (at about 0.5), which means the model had high bias. When the maximum depth was 6 or 10, the two curves didn't converge and the training curve was always higher than the testing score, which means the model suffers from overfitting. Therefore among the four maximum depth, 3 is the best. I would say a maximum depth of 3 or 4 because I think model with maximum of 4 might have a higher score at which the two curves converge.</p>
 
 </div>
 </div>
@@ -13810,7 +13577,7 @@ However, when the model is trained with a maximum depth of 10, we can see that t
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<h2 id="Evaluating-Model-Performance">Evaluating Model Performance<a class="anchor-link" href="#Evaluating-Model-Performance">&#182;</a></h2><p>In this final section of the project, you will construct a model and make a prediction on the client's feature set using an optimized model from <code>fit_model</code>.</p>
+<h2 id="Evaluating-Model-Performance">Evaluating Model Performance<a class="anchor-link" href="#Evaluating-Model-Performance">&#182;</a></h2><p>Construct a model and make a prediction on the client's feature set using an optimized model from <code>fit_model</code>.</p>
 
 </div>
 </div>
@@ -13820,11 +13587,8 @@ However, when the model is trained with a maximum depth of 10, we can see that t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-7---Grid-Search">Question 7 - Grid Search<a class="anchor-link" href="#Question-7---Grid-Search">&#182;</a></h3><ul>
-<li>What is the grid search technique?</li>
-<li>How it can be applied to optimize a learning algorithm?</li>
-</ul>
-<p><strong> Hint: </strong> When explaining the Grid Search technique, be sure to touch upon why it is used,  what the 'grid' entails and what the end goal of this method is. To solidify your answer, you can also give an example of a parameter in a model that can be optimized using this approach.</p>
+<h3 id="Grid-Search">Grid Search<a class="anchor-link" href="#Grid-Search">&#182;</a></h3><p>Some models have multiple hyper-parameters which are not directly learned within estimators. Different combinations of different values of these hyper-parameters will affect the model's performance. Grid search technique in fact helps us generate a set of models (which differ from each other in their hyper-parameter values, which lie on a grid). Then we can train each of the models and evaluate it using cross-validation, and select the one that performed best.</p>
+<p>To be specific, for a SVM model, kernel and C are two of its hyper-parameters. If we are considering two types of kernels (linear and polynomial) and three values of C (0.1, 1, 10), then using grid search we can try all the combinations of the values of the two hyper-parameters, i.e., six combinations. Then with grid search technique we can try all the six combinations and pick the model which has the highest score.</p>
 
 </div>
 </div>
@@ -13834,37 +13598,7 @@ However, when the model is trained with a maximum depth of 10, we can see that t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong><br>
-Some models have multiple hyper-parameters which are not directly learned within estimators. Different combinations of different values of these hyper-parameters will affect the model's performance. Grid search technique in fact helps us generate a set of models (which differ from each other in their hyper-parameter values, which lie on a grid). Then we can train each of the models and evaluate it using cross-validation, and select the one that performed best.</p>
-<p>To be specific, for a SVM model, kernel and C are two of its hyper-parameters. If we are considering two types of kernels (linear and polynomial) and three values of C (0.1, 1, 10),  then using grid search we can try all the combinations of the values of the two hyper-parameters, i.e., six combinations. Then with grid search technique we can try all the six combinations and pick the model which has the highest score.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-8---Cross-Validation">Question 8 - Cross-Validation<a class="anchor-link" href="#Question-8---Cross-Validation">&#182;</a></h3><ul>
-<li><p>What is the k-fold cross-validation training technique?</p>
-</li>
-<li><p>What benefit does this technique provide for grid search when optimizing a model?</p>
-</li>
-</ul>
-<p><strong>Hint:</strong> When explaining the k-fold cross validation technique, be sure to touch upon what 'k' is, how the dataset is split into different parts for training and testing and the number of times it is run based on the 'k' value.</p>
-<p>When thinking about how k-fold cross validation helps grid search, think about the main drawbacks of grid search which are hinged upon <strong>using a particular subset of data for training or testing</strong> and how k-fold cv could help alleviate that. You can refer to the <a href="http://scikit-learn.org/stable/modules/cross_validation.html#cross-validation">docs</a> for your answer.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong><br>
-The k-fold cross-validation training is to partition the original training data set into k equal subsets (folds), then each time use one fold as validation set and use all the remaining k-1 folds as the training set. Each time the model is trained using the training set and the accuracy of the model is calculated by validating the predicted results against the validation set. The accuracy of the model then is evaluated by averaging the accuracies derived in all the k cases of cross validation.</p>
+<h3 id="Cross-Validation">Cross-Validation<a class="anchor-link" href="#Cross-Validation">&#182;</a></h3><p>The k-fold cross-validation training is to partition the original training data set into k equal subsets (folds), then each time use one fold as validation set and use all the remaining k-1 folds as the training set. Each time the model is trained using the training set and the accuracy of the model is calculated by validating the predicted results against the validation set. The accuracy of the model then is evaluated by averaging the accuracies derived in all the k cases of cross validation.</p>
 <p>Grid search is a good technique which helps us find the best combination of hyper-parameters for the model. However, there is a potential problem of overfitting, which means that it is possible that although the combination of the hyper-parameters is the best for the training data, it may be not that good when generalize to new data. Therefore, k-fold cross validation is especially useful to grid search, because by training the model with (k-1)/k of the data and validating the predicted results with 1/k of the data for k times, we can monitor the overfitting problem for the final model.</p>
 
 </div>
@@ -13875,27 +13609,7 @@ The k-fold cross-validation training is to partition the original training data 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Implementation:-Fitting-a-Model">Implementation: Fitting a Model<a class="anchor-link" href="#Implementation:-Fitting-a-Model">&#182;</a></h3><p>Your final implementation requires that you bring everything together and train a model using the <strong>decision tree algorithm</strong>. To ensure that you are producing an optimized model, you will train the model using the grid search technique to optimize the <code>'max_depth'</code> parameter for the decision tree. The <code>'max_depth'</code> parameter can be thought of as how many questions the decision tree algorithm is allowed to ask about the data before making a prediction. Decision trees are part of a class of algorithms called <em>supervised learning algorithms</em>.</p>
-<p>In addition, you will find your implementation is using <code>ShuffleSplit()</code> for an alternative form of cross-validation (see the <code>'cv_sets'</code> variable). While it is not the K-Fold cross-validation technique you describe in <strong>Question 8</strong>, this type of cross-validation technique is just as useful!. The <code>ShuffleSplit()</code> implementation below will create 10 (<code>'n_splits'</code>) shuffled sets, and for each shuffle, 20% (<code>'test_size'</code>) of the data will be used as the <em>validation set</em>. While you're working on your implementation, think about the contrasts and similarities it has to the K-fold cross-validation technique.</p>
-<p>Please note that ShuffleSplit has different parameters in scikit-learn versions 0.17 and 0.18.
-For the <code>fit_model</code> function in the code cell below, you will need to implement the following:</p>
-<ul>
-<li>Use <a href="http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html"><code>DecisionTreeRegressor</code></a> from <code>sklearn.tree</code> to create a decision tree regressor object.<ul>
-<li>Assign this object to the <code>'regressor'</code> variable.</li>
-</ul>
-</li>
-<li>Create a dictionary for <code>'max_depth'</code> with the values from 1 to 10, and assign this to the <code>'params'</code> variable.</li>
-<li>Use <a href="http://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html"><code>make_scorer</code></a> from <code>sklearn.metrics</code> to create a scoring function object.<ul>
-<li>Pass the <code>performance_metric</code> function as a parameter to the object.</li>
-<li>Assign this scoring function to the <code>'scoring_fnc'</code> variable.</li>
-</ul>
-</li>
-<li>Use <a href="http://scikit-learn.org/0.17/modules/generated/sklearn.grid_search.GridSearchCV.html"><code>GridSearchCV</code></a> from <code>sklearn.grid_search</code> to create a grid search object.<ul>
-<li>Pass the variables <code>'regressor'</code>, <code>'params'</code>, <code>'scoring_fnc'</code>, and <code>'cv_sets'</code> as parameters to the object. </li>
-<li>Assign the <code>GridSearchCV</code> object to the <code>'grid'</code> variable.</li>
-</ul>
-</li>
-</ul>
+<h3 id="Fitting-a-Model">Fitting a Model<a class="anchor-link" href="#Fitting-a-Model">&#182;</a></h3><p>Train a model using the <strong>decision tree algorithm</strong> with the grid search technique to optimize the <code>'max_depth'</code> parameter for the decision tree.</p>
 
 </div>
 </div>
@@ -13905,7 +13619,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span>
 <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span>
@@ -13914,23 +13628,19 @@ For the <code>fit_model</code> function in the code cell below, you will need to
     <span class="sd">&quot;&quot;&quot; Performs grid search over the &#39;max_depth&#39; parameter for a </span>
 <span class="sd">        decision tree regressor trained on the input data [X, y]. &quot;&quot;&quot;</span>
     
-    <span class="c1"># Create cross-validation sets from the training data</span>
-    <span class="c1"># sklearn version 0.18: ShuffleSplit(n_splits=10, test_size=0.1, train_size=None, random_state=None)</span>
-    <span class="c1"># sklearn version 0.17: ShuffleSplit(n, n_iter=10, test_size=0.1, train_size=None, random_state=None)</span>
+    <span class="c1"># Create cross-validation sets from the training data    </span>
     <span class="n">cv_sets</span> <span class="o">=</span> <span class="n">ShuffleSplit</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.20</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
-    <span class="c1"># TODO: Create a decision tree regressor object</span>
+    <span class="c1"># Create a decision tree regressor object</span>
     <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-    <span class="c1"># TODO: Create a dictionary for the parameter &#39;max_depth&#39; with a range from 1 to 10</span>
+    <span class="c1"># Create a dictionary for the parameter &#39;max_depth&#39; with a range from 1 to 10</span>
     <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]}</span>
 
-    <span class="c1"># TODO: Transform &#39;performance_metric&#39; into a scoring function using &#39;make_scorer&#39; </span>
+    <span class="c1"># Transform &#39;performance_metric&#39; into a scoring function using &#39;make_scorer&#39; </span>
     <span class="n">scoring_fnc</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">performance_metric</span><span class="p">)</span>
 
-    <span class="c1"># TODO: Create the grid search cv object --&gt; GridSearchCV()</span>
-    <span class="c1"># Make sure to include the right parameters in the object:</span>
-    <span class="c1"># (estimator, param_grid, scoring, cv) which have values &#39;regressor&#39;, &#39;params&#39;, &#39;scoring_fnc&#39;, and &#39;cv_sets&#39; respectively.</span>
+    <span class="c1"># Create the grid search cv object --&gt; GridSearchCV()    </span>
     <span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">estimator</span> <span class="o">=</span> <span class="n">regressor</span><span class="p">,</span> <span class="n">param_grid</span> <span class="o">=</span> <span class="n">params</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">scoring_fnc</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span> <span class="n">cv_sets</span><span class="p">)</span>
 
     <span class="c1"># Fit the grid search object to the data to compute the optimal model</span>
@@ -13950,8 +13660,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Making-Predictions">Making Predictions<a class="anchor-link" href="#Making-Predictions">&#182;</a></h3><p>Once a model has been trained on a given set of data, it can now be used to make predictions on new sets of input data. In the case of a <em>decision tree regressor</em>, the model has learned <em>what the best questions to ask about the input data are</em>, and can respond with a prediction for the <strong>target variable</strong>. You can use these predictions to gain information about data where the value of the target variable is unknown — such as data the model was not trained on.</p>
-
+<h2 id="Making-Predictions">Making Predictions<a class="anchor-link" href="#Making-Predictions">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13960,11 +13669,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-9---Optimal-Model">Question 9 - Optimal Model<a class="anchor-link" href="#Question-9---Optimal-Model">&#182;</a></h3><ul>
-<li>What maximum depth does the optimal model have? How does this result compare to your guess in <strong>Question 6</strong>?  </li>
-</ul>
-<p>Run the code block below to fit the decision tree regressor to the training data and produce an optimal model.</p>
-
+<h3 id="Optimal-Model">Optimal Model<a class="anchor-link" href="#Optimal-Model">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14006,18 +13711,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong> Hint: </strong> The answer comes from the output of the code snipped above.</p>
-<p><strong>Answer: </strong>  the maximum depth of the optimal model is 4, which is very close to my guess.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-10---Predicting-Selling-Prices">Question 10 - Predicting Selling Prices<a class="anchor-link" href="#Question-10---Predicting-Selling-Prices">&#182;</a></h3><p>Imagine that you were a real estate agent in the Boston area looking to use this model to help price homes owned by your clients that they wish to sell. You have collected the following information from three of your clients:</p>
+<h3 id="Predicting-Selling-Prices">Predicting Selling Prices<a class="anchor-link" href="#Predicting-Selling-Prices">&#182;</a></h3><p>Use this model to predict the selling price for the three clients below:</p>
 <table>
 <thead><tr>
 <th style="text-align:center">Feature</th>
@@ -14047,12 +13741,6 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </tr>
 </tbody>
 </table>
-<ul>
-<li>What price would you recommend each client sell his/her home at? </li>
-<li>Do these prices seem reasonable given the values for the respective features? </li>
-</ul>
-<p><strong>Hint:</strong> Use the statistics you calculated in the <strong>Data Exploration</strong> section to help justify your response.  Of the three clients, client 3 has has the biggest house, in the best public school neighborhood with the lowest poverty level; while client 2 has the smallest house, in a neighborhood with a relatively high poverty rate and not the best public schools.</p>
-<p>Run the code block below to have your optimized model make predictions for each client's home.</p>
 
 </div>
 </div>
@@ -14100,18 +13788,7 @@ Predicted selling price for Client 3&#39;s home: $937,230.00
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sensitivity">Sensitivity<a class="anchor-link" href="#Sensitivity">&#182;</a></h3><p>An optimal model is not necessarily a robust model. Sometimes, a model is either too complex or too simple to sufficiently generalize to new data. Sometimes, a model could use a learning algorithm that is not appropriate for the structure of the data given. Other times, the data itself could be too noisy or contain too few samples to allow a model to adequately capture the target variable — i.e., the model is underfitted.</p>
-<p><strong>Run the code cell below to run the <code>fit_model</code> function ten times with different training and testing sets to see how the prediction for a specific client changes with respect to the data it's trained on.</strong></p>
+<h3 id="Sensitivity">Sensitivity<a class="anchor-link" href="#Sensitivity">&#182;</a></h3><p>Run the <code>fit_model</code> function ten times with different training and testing sets to see how the prediction for a specific client changes with respect to the data it's trained on.</p>
 
 </div>
 </div>
@@ -14161,40 +13838,8 @@ Range in prices: $29,438.89
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-11---Applicability">Question 11 - Applicability<a class="anchor-link" href="#Question-11---Applicability">&#182;</a></h3><ul>
-<li>In a few sentences, discuss whether the constructed model should or should not be used in a real-world setting.  </li>
-</ul>
-<p><strong>Hint:</strong> Take a look at the range in prices as calculated in the code snippet above. Some questions to answering:</p>
-<ul>
-<li>How relevant today is data that was collected from 1978? How important is inflation?</li>
-<li>Are the features present in the data sufficient to describe a home? Do you think factors like quality of apppliances in the home, square feet of the plot area, presence of pool or not etc should factor in?</li>
-<li>Is the model robust enough to make consistent predictions?</li>
-<li>Would data collected in an urban city like Boston be applicable in a rural city?</li>
-<li>Is it fair to judge the price of an individual home based on the characteristics of the entire neighborhood?</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>  The Average annual inflation rate is 3.22% since the U.S. government began tracking it in 1913. It means that at that rate prices will double every 20 years. Therefore, since it is already 40 years since when the data was collected, I think the data probably cannot precisely predict today's price. However, the trend of how the predictors affect the price should still be meaningful, i.e., how the number of rooms, percent of lower class workers, and ratio of students to teachers affect the price should remain the same even after 40 years. So this model is still a good reference when we want to predict today's house price, but the exact price cannot be generated from it.</p>
+<h3 id="Applicability:-Discuss-whether-the-constructed-model-should-or-should-not-be-used-in-a-real-world-setting.">Applicability: Discuss whether the constructed model should or should not be used in a real-world setting.<a class="anchor-link" href="#Applicability:-Discuss-whether-the-constructed-model-should-or-should-not-be-used-in-a-real-world-setting.">&#182;</a></h3><p>The Average annual inflation rate is 3.22% since the U.S. government began tracking it in 1913. It means that at that rate prices will double every 20 years. Therefore, since it is already 40 years since when the data was collected, I think the data probably cannot precisely predict today's price. However, the trend of how the predictors affect the price should still be meaningful, i.e., how the number of rooms, percent of lower class workers, and ratio of students to teachers affect the price should remain the same even after 40 years. So this model is still a good reference when we want to predict today's house price, but the exact price cannot be generated from it.</p>
 <p>The features in the data are not sufficient to describe a home. There are other important factors that can significantly affect the price of a house, for example, the age of the house, the location of the house, quality of appliances in the home, square feet of the plot area, and presence of pool or not, etc, should also affect the price. Therefore, the current model might not be robust enough to make consistent predictions, for we don't know whether there are any interactions between the current three factors and other potential factors. Among these factors, some are about the house itself (like the quality of appliances and whether the house is old or new), and others are about the neighbourhood (like the location of the house), so simply knowing the house itself or only evaluating the neighbourhood quality cannot make a food prediction. In addition, if demand for houses increases faster than supply, then house price goes up. So the price is determined by multiple factors from various aspects, and the current model is not good enough.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p><strong>Note</strong>: Once you have completed all of the code implementations and successfully answered each question above, you may finalize your work by exporting the iPython Notebook as an HTML document. You can do this by using the menu above and navigating to<br>
-<strong>File -&gt; Download as -&gt; HTML (.html)</strong>. Include the finished document along with this notebook as your submission.</p>
-</blockquote>
 
 </div>
 </div>
